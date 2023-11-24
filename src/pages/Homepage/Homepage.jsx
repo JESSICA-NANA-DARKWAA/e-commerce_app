@@ -7,6 +7,7 @@ import Picture4 from "../../assets/images/pic4.png";
 import Picture5 from "../../assets/images/pic5.png";
 import "./Homepage.css";
 import GalleryItem from "../../componenents/gallery-item/GalleryItem";
+import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <Layout pageNumber={1}>
