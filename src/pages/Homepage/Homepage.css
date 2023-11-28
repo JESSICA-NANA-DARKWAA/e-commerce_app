@@ -10,7 +10,8 @@
 .page-title {
   color: var(--Black, #222);
   text-align: center;
-  font-family: Damion;
+  font-family: "Damion";
+  color: #333;
   font-size: 96px;
   font-style: normal;
   font-weight: 400;

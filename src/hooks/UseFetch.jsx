@@ -10,6 +10,7 @@ const useFetch = ({ url }) => {
       const data = await response.json();
       setData(data);
       setLoading(false);
+      console.log(data);
     } catch (error) {
       setLoading(false);
       setError("Oops! An Error occurred");
@@ -18,7 +19,7 @@ const useFetch = ({ url }) => {
 
   useEffect(() => {
     getData(url);
-  });
+  }, []);
   return [data, loading, error];
 };
 

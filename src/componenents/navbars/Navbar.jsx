@@ -25,7 +25,7 @@ const Navbar = () => {
         </form>
         <div className="cart-wrapper">
           <span className="cart-icon">
-            <BsCart2 />
+            <BsCart2 size={30} />
             {cartItemCount > 0 && (
               <span className="cart-count">{cartItemCount}</span>
             )}

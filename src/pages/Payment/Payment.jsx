@@ -1,7 +1,12 @@
 import React from "react";
+import Layout from "../../componenents/navbars/Navbar2";
 
 const Payment = () => {
-  return <div>Payment</div>;
+  return (
+    <Layout>
+      <div>Payment</div>
+    </Layout>
+  );
 };
 
 export default Payment;
