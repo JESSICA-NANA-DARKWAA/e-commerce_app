@@ -7,7 +7,7 @@ import Loading from "../../componenents/loading/Loading";
 
 const ProductListing = () => {
   const [data, loading, error] = useFetch({
-    url: "https://api.escuelajs.co/api/v1/categories",
+    url: "https://fakestoreapi.com/products",
   });
   return (
     <Layout pageNumber={1}>

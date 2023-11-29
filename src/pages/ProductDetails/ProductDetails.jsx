@@ -6,6 +6,7 @@ import Loading from "../../componenents/loading/Loading";
 import "./ProductDetails.css";
 import { MdStarRate } from "react-icons/md";
 import { MdStoreMallDirectory } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
   const param = useParams().id;
@@ -22,7 +23,7 @@ const ProductDetails = () => {
     loading,
     error,
   ] = useFetch({
-    url: "https://api.escuelajs.co/api/v1/products" + param,
+    url: "https://fakestoreapi.com/products/" + param,
   });
   return (
     <Layout>
@@ -33,6 +34,10 @@ const ProductDetails = () => {
           <div className="image-option-box">
             <div className="img-box">
               <img src={image} alt="" />
+              <div className="description-box">
+                <h1 className="title">Product Details</h1>
+                <p>{description}</p>
+              </div>
             </div>
             <div className="option-box">
               <p>{title} </p>
@@ -52,9 +57,15 @@ const ProductDetails = () => {
               </div>
               <div className="price"> GHC₵{price}</div>
               <div className="color-box">
-                <button className="color-btn1">Black</button>
-                <button className="color-btn2">Brown</button>
-                <button className="color-btn3">Gray</button>
+                <button className="color-btn1" type="button">
+                  Black
+                </button>
+                <button className="color-btn2" type="button">
+                  Brown
+                </button>
+                <button className="color-btn3" type="button">
+                  Gray
+                </button>
                 <br />
                 <div></div>
               </div>
@@ -64,11 +75,14 @@ const ProductDetails = () => {
               <button className="size-btn">X</button>
               <button className="size-btn">XL</button>
               <button className="size-btn">XXL</button>
+              <div>
+                <button className="number-btn">-</button>1
+                <button className="number-btn">+</button>
+              </div>
+              <Link to="/Payment" className="Buy-now">
+                <button className="buy-now-button">Buy Now</button>
+              </Link>
             </div>
-          </div>
-          <div className="description-box">
-            <h1 className="title">Product Details</h1>
-            <p>{description}</p>
           </div>
         </div>
       )}

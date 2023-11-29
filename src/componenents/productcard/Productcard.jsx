@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ProductCard.css";
 import { MdStarRate } from "react-icons/md";
 import { Link } from "react-router-dom";
-function ProductCard({ title, rating, image, price, id }) {
+import { AppContext } from "../../AppContext";
+function ProductCard(item) {
+  const { title, rating, image, price, id } = item;
+  const { addToCart } = useContext(AppContext);
   const handleAddToCart = () => {
-    console.log(`Added ${title} to cart`);
+    addToCart(item);
   };
-
   return (
     <div className="product-card">
       <Link to={"/product/" + id}>
@@ -29,9 +31,11 @@ function ProductCard({ title, rating, image, price, id }) {
           <span key={index} className="rating-icon"></span>
         ))}
       </div>
-      <button onClick={handleAddToCart} className="cart-button">
-        Add to Cart
-      </button>
+      <div style={{ textAlign: "center" }}>
+        <button onClick={handleAddToCart} className="cart-button">
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 }

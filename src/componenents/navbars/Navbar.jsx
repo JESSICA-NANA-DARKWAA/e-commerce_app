@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { IoMdSearch } from "react-icons/io";
 import { BsCart2 } from "react-icons/bs";
 import "./Navbar.css";
+import { AppContext } from "../../AppContext";
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [cartItemCount, setCartItemCount] = useState(2); // Example cart item count
+
+  const { cart } = useContext(AppContext);
 
   return (
     <div>
@@ -23,14 +25,12 @@ const Navbar = () => {
             </button>
           </div>
         </form>
-        <div className="cart-wrapper">
+        <Link to="/cart" className="cart-wrapper">
           <span className="cart-icon">
-            <BsCart2 size={30} />
-            {cartItemCount > 0 && (
-              <span className="cart-count">{cartItemCount}</span>
-            )}
+            <BsCart2 size={22} />
+            <span className="cart-count">{cart.length}</span>
           </span>
-        </div>
+        </Link>
         <div className="account-box">
           {isLoggedIn ? (
             <div className="profile-wrapper">

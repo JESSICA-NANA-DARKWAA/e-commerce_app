@@ -1,20 +1,27 @@
 .image-option-box {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-column-gap: 2rem;
-  padding: 2rem;
+  grid-column-gap: 4rem;
+  padding: 4rem;
 }
 .img-box img {
-  width: 628px;
-  height: 509px;
+  width: 500px;
+  height: 500px;
   flex-shrink: 0;
   border: 1px solid white;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .option-box {
   background: white;
   padding: 2rem;
   margin-bottom: 4rem;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  width: 628px;
+  height: 509px;
+  flex-shrink: 0;
 }
 .top-features {
   display: flex;
@@ -71,6 +78,7 @@
   border: 1px solid white;
   padding: 5px;
   font-weight: bold;
+  margin-right: 10px;
 }
 .size-text {
   display: flex;
@@ -82,4 +90,26 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+.number-btn {
+  width: 100px;
+  height: 36px;
+  flex-shrink: 0;
+  background: #f6f6f6;
+  margin-top: 2rem;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);
+  border: 1px solid white;
+  display: inline-block;
+  justify-content: center;
+  font-weight: bold;
+}
+.buy-now-button {
+  width: 150px;
+  height: 40px;
+  flex-shrink: 0;
+  background: #fff;
+  margin-top: 2rem;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);
+  margin-right: 10px;
+  border: 1px solid white;
 }
