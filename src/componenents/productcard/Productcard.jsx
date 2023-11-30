@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../AppContext";
 function ProductCard(item) {
   const { title, rating, image, price, id } = item;
-  const { addToCart } = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
   const handleAddToCart = () => {
-    addToCart(item);
+    dispatch({
+      type: "ADD",
+      payload: item,
+    });
   };
   return (
     <div className="product-card">
