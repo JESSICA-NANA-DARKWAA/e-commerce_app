@@ -1,1 +1,23 @@
+.cart-view-container {
+  display: flex;
+  justify-content: center;
+}
 
+.cart-view-container .image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-view-container .image-box img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.cart-view-container .description-box {
+  width: 384px;
+  height: 200px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);
+  color: rosybrown;
+}
