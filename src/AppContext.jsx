@@ -3,18 +3,23 @@ let storedCart = localStorage.getItem("cart");
 if (storedCart) storedCart = JSON.parse(storedCart);
 export const AppContext = createContext({ cart: storedCart || [] });
 
+
+const findItem = (existingItems, item) => {
+  return existingItems.find((value) => (value.id == item.id))
+}
 const AppContextProvider = ({ children }) => {
   const reducer = (state, action) => {
     switch (action.type) {
       case "ADD":
-        console.log(action);
-
-        return {
-          cart:
-            action.payload?.length > 0
-              ? [action.payload, ...state.cart]
-              : [action.payload],
-        };
+        if (state.cart.length === 0 || !findItem(state.cart, action.payload)) {
+          return {
+            cart: [
+              ...state.cart,
+              action.payload
+            ]
+          };
+        }
+        return state;
 
       default:
         return state;
