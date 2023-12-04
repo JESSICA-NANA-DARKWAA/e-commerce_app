@@ -4,7 +4,7 @@ import { IoMdSearch } from "react-icons/io";
 import { BsCart2 } from "react-icons/bs";
 import "./Navbar2.css";
 
-const Navbar = () => {
+const Navbar = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [cartItemCount, setCartItemCount] = useState(2); // Example cart item count
 
@@ -22,6 +22,7 @@ const Navbar = () => {
           />
         </span>
       </nav>
+      {children}
     </div>
   );
 };

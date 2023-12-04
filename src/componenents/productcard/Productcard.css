@@ -20,6 +20,11 @@
   border: 1px solid #1f71bc;
   color: white;
 }
+.cart-button:hover {
+  background-color: #ff0000;
+  cursor: pointer;
+}
+
 .price {
   color: var(--Black, #222);
   font-family: Roboto;
