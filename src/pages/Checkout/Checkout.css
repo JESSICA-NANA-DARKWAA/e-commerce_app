@@ -18,6 +18,14 @@
   background-color: dodgerblue;
   color: white;
   border: 2px solid whitesmoke;
+  color: #fff;
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
 }
 .number-circle2 {
   border-radius: 50%;
@@ -28,6 +36,14 @@
   background-color: gray;
   color: white;
   border: 2px solid whitesmoke;
+  color: #fff;
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
 }
 .number-circle3 {
   border-radius: 50%;
@@ -37,6 +53,14 @@
   flex-shrink: 0;
   background-color: gray;
   color: white;
+  color: #fff;
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
   border: 2px solid whitesmoke;
 }
 .line-int {
@@ -55,12 +79,10 @@
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   padding: 10px;
-  color: var(--Black, #222);
-  font-family: Roboto;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  display: flex;
-  justify-content: space-between;
+}
+.identity-container.secondary-text p {
+  text-align: start;
+}
+.identity-container .cart-button {
+  margin-left: 85%;
 }
