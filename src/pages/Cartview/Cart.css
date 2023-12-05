@@ -1,10 +1,11 @@
 .cart-view-container {
-  padding: 128px;
+  /* padding: 128px; */
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  /* gap: 32px; */
   justify-content: space-between;
-  margin-right: 10%;
+  /* margin-right: 10%; */
+  overflow: hidden;
 }
 
 .cart-card {
@@ -12,15 +13,15 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  margin-right: 10%;
+  margin-left: 20px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .cart-card img {
   width: 200px;
   height: 200px;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-  padding: 10px;
-  margin-right: 10%;
 }
 .cart-card .title-box {
   width: 384px;
@@ -71,7 +72,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 20px;
 }
 .select-box {
   width: 200px;
@@ -104,7 +106,7 @@
 
 .check-btn {
   width: 419px;
-  height: 60px;
+  height: 66px;
   flex-shrink: 0;
   background: #1f71bc;
   color: white;
@@ -122,5 +124,35 @@
   flex-shrink: 0;
   background: #fff;
   box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);
+  border: 2px solid whitesmoke;
+  margin-left: 20px;
+}
+.check-price-button {
+  color: var(--Black, #222);
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: start;
+}
+
+.addup-box {
+  width: 177px;
+  height: 42.187px;
+  flex-shrink: 0;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1.834px 7.337px -1.834px rgba(0, 0, 0, 0.25);
+}
+.remove-btn {
+  border: 2px solid whitesmoke;
+}
+.add-btn {
+  border: 2px solid whitesmoke;
+}
+.num-btn {
   border: 2px solid whitesmoke;
 }

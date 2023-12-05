@@ -9,7 +9,7 @@ const Payment = () => {
         <div className="circle-container">
           <button className="number-circle1">1</button>
           <button className="line-int"></button>
-          <button className="number-circle2">2</button>
+          <button className="number-circleB">2</button>
           <button className="line-int"></button>
           <button className="number-circle3">3</button>
         </div>

@@ -6,7 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  opacity: 0.7;
+  margin-left: 20px;
   box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);
 }
 .number-circle1 {
@@ -15,7 +16,7 @@
   width: 100px;
   height: 100px;
   flex-shrink: 0;
-  background-color: dodgerblue;
+  background-color: #1f71bc;
   color: white;
   border: 2px solid whitesmoke;
   color: #fff;
@@ -72,13 +73,14 @@
 }
 .identity-container {
   width: 1280px;
-  height: 200px;
+  height: 150px;
   flex-shrink: 0;
   background: #fff;
   box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.25);
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   padding: 10px;
+  margin-left: 20px;
 }
 .identity-container.secondary-text p {
   text-align: start;

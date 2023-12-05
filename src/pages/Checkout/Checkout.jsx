@@ -5,8 +5,33 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../AppContext";
 import { MdStoreMallDirectory } from "react-icons/md";
 
+function calculateTotalPrice(cartItems) {
+  var totalPrice = 0;
+
+  for (var i = 0; i < cartItems.length; i++) {
+    var item = cartItems[i];
+    totalPrice += item.price * item.count;
+  }
+  return totalPrice;
+}
+
 const Checkout = () => {
-  const { cart } = useContext(AppContext);
+  const { cart, dispatch } = useContext(AppContext);
+
+  const totalPrice = calculateTotalPrice(cart);
+
+  const incre = (id) => {
+    dispatch({
+      type: "INCRE",
+      payload: id,
+    });
+  };
+  const decre = (id) => {
+    dispatch({
+      type: "DECRE",
+      payload: id,
+    });
+  };
 
   return (
     <Layout>
@@ -44,15 +69,19 @@ const Checkout = () => {
               </div>
               <div className="price">GH₵{item.price}</div>
               <div className="incresement-box">
-                <Link to="/Cart" className="">
-                  <button className="remove-btn">-</button>
-                </Link>
-                <Link to="/Cart" className="">
-                  <button className="num-btn">1</button>
-                </Link>
-                <Link to="/Cart" className="">
-                  <button className="add-btn">+</button>
-                </Link>
+                {/*<Link to="/Cart" className="">*/}
+
+                {/* </Link>*/}
+                {/* <Link to="/Cart" className=""> */}
+                <button onClick={() => decre(item.id)} className="remove-btn">
+                  -
+                </button>
+                <button className="num-btn">{item.count}</button>
+                <button onClick={() => incre(item.id)} className="add-btn">
+                  +
+                </button>
+
+                {/* </Link> */}
               </div>
               <div className="select-box">
                 <Link to="/Products" className="remove-box">
@@ -66,7 +95,7 @@ const Checkout = () => {
           );
         })}
       </div>
-      <button className="check-price-button">GH₵</button>
+      <button className="check-price-button">GH₵{totalPrice.toFixed(2)}</button>
       <Link to="/Payment">
         <button className="check-btn">Confirm Order</button>
       </Link>

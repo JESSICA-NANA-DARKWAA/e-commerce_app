@@ -4,10 +4,20 @@ import "./Cart.css";
 import { AppContext } from "../../AppContext";
 import { MdStoreMallDirectory } from "react-icons/md";
 import { Link } from "react-router-dom";
+function calculateTotalPrice(cartItems) {
+  var totalPrice = 0;
 
+  for (var i = 0; i < cartItems.length; i++) {
+    var item = cartItems[i];
+    totalPrice += item.price;
+  }
+
+  return totalPrice;
+}
 const Cart = () => {
   const { cart } = useContext(AppContext);
-
+  const totalPrice = calculateTotalPrice(cart);
+  console.log(cart);
   return (
     <Layout pageNumber={1}>
       <div className="cart-view-container">
@@ -27,15 +37,13 @@ const Cart = () => {
               </div>
               <div className="price">GH₵{item.price}</div>
               <div className="incresement-box">
-                <Link to="/Cart" className="">
+                <div className="addup-box">
                   <button className="remove-btn">-</button>
-                </Link>
-                <Link to="/Cart" className="">
-                  <button className="num-btn">1</button>
-                </Link>
-                <Link to="/Cart" className="">
+
+                  <button className="num-btn">{item.count}</button>
+
                   <button className="add-btn">+</button>
-                </Link>
+                </div>
               </div>
               <div className="select-box">
                 <Link to="/Products" className="remove-box">
@@ -49,7 +57,7 @@ const Cart = () => {
           );
         })}
       </div>
-      <button className="check-price-button">GH₵</button>
+      <button className="check-price-button">GH₵{totalPrice.toFixed(2)}</button>
       <Link to="/Checkout">
         <button className="check-btn">Checkout</button>
       </Link>

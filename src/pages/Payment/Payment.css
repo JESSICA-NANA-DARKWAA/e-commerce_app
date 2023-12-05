@@ -1,3 +1,21 @@
+.number-circleB {
+  border-radius: 50%;
+  margin-left: 5px;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-color: #1f71bc;
+  color: white;
+  border: 2px solid whitesmoke;
+  color: #fff;
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
 .payment-option-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30,9 +48,10 @@
   width: 206px;
   height: 40px;
   flex-shrink: 0;
-  background-color: dodgerblue;
+  background-color: #1f71bc;
   border: 2px solid whitesmoke;
   margin-left: 45%;
+  color: white;
 }
 .option-btn {
   width: 300px;
