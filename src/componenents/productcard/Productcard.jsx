@@ -7,6 +7,7 @@ function ProductCard(item) {
   const { title, rating, image, price, id } = item;
   const { dispatch } = useContext(AppContext);
   const handleAddToCart = () => {
+    console.log("Bright Edem Gawu");
     dispatch({
       type: "ADD",
       payload: item,

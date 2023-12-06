@@ -11,7 +11,7 @@ const Navbar = ({ children }) => {
   return (
     <div>
       <nav className="navbar">
-        <span className="logo">Logo</span>
+        <span className="logo">LOGO</span>
 
         <span>
           username

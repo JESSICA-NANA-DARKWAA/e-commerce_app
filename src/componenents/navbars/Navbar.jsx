@@ -13,7 +13,7 @@ const Navbar = ({ cartItems }) => {
   return (
     <div>
       <nav className="navbar">
-        <span className="logo">Logo</span>
+        <span className="logo">LOGO</span>
         <Link to="/Products" className="Retail-btn">
           Retail
         </Link>

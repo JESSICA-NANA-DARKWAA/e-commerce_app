@@ -18,6 +18,18 @@ const Cart = () => {
   const { cart } = useContext(AppContext);
   const totalPrice = calculateTotalPrice(cart);
   console.log(cart);
+  const incre = (id) => {
+    dispatch({
+      type: "INCRE",
+      payload: id,
+    });
+  };
+  const decre = (id) => {
+    dispatch({
+      type: "DECRE",
+      payload: id,
+    });
+  };
   return (
     <Layout pageNumber={1}>
       <div className="cart-view-container">
@@ -29,8 +41,10 @@ const Cart = () => {
               <div className="title-box">
                 {item.title}
                 <div className="title-text">
-                  <MdStoreMallDirectory />
-                  Seller: James cottage
+                  <h4>
+                    <MdStoreMallDirectory /> Seller: James cottage
+                  </h4>
+                  <br />
                   <br />
                   <p>2 Available</p>
                 </div>
@@ -38,11 +52,13 @@ const Cart = () => {
               <div className="price">GH₵{item.price}</div>
               <div className="incresement-box">
                 <div className="addup-box">
-                  <button className="remove-btn">-</button>
-
+                  <button onClick={() => decre(item.id)} className="remove-btn">
+                    -
+                  </button>
                   <button className="num-btn">{item.count}</button>
-
-                  <button className="add-btn">+</button>
+                  <button onClick={() => incre(item.id)} className="add-btn">
+                    +
+                  </button>
                 </div>
               </div>
               <div className="select-box">

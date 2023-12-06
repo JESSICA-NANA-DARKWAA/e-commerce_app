@@ -46,6 +46,7 @@ const Checkout = () => {
       <div className="identity-container">
         <button className="cart-button">Change</button>
         <div className="secondary-text">
+          <h2>Robert Elinam</h2>
           <p>
             Western Region Sekondi Takoradi Metro Takoradi 17/8 old john saba
             road.
@@ -61,27 +62,26 @@ const Checkout = () => {
               <div className="title-box">
                 {item.title}
                 <div className="title-text">
-                  <MdStoreMallDirectory />
-                  Seller: James cottage
+                  <h4>
+                    {" "}
+                    <MdStoreMallDirectory />
+                    Seller: James cottage
+                  </h4>
                   <br />
                   <p>2 Available</p>
                 </div>
               </div>
               <div className="price">GH₵{item.price}</div>
               <div className="incresement-box">
-                {/*<Link to="/Cart" className="">*/}
-
-                {/* </Link>*/}
-                {/* <Link to="/Cart" className=""> */}
-                <button onClick={() => decre(item.id)} className="remove-btn">
-                  -
-                </button>
-                <button className="num-btn">{item.count}</button>
-                <button onClick={() => incre(item.id)} className="add-btn">
-                  +
-                </button>
-
-                {/* </Link> */}
+                <div className="addup-box">
+                  <button onClick={() => decre(item.id)} className="remove-btn">
+                    -
+                  </button>
+                  <button className="num-btn">{item.count}</button>
+                  <button onClick={() => incre(item.id)} className="add-btn">
+                    +
+                  </button>
+                </div>
               </div>
               <div className="select-box">
                 <Link to="/Products" className="remove-box">

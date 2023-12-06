@@ -10,6 +10,16 @@ const findItem = (existingItems, item) => {
 const AppContextProvider = ({ children }) => {
   const reducer = (state, action) => {
     switch (action.type) {
+      case "ADD":
+        let payload = { ...action.payload, count: 1 };
+        console.log(payload);
+        if (state.cart.length === 0 || !findItem(state.cart, action.payload)) {
+          return {
+            cart: [...state.cart, payload],
+          };
+        }
+        return state;
+
       case "INCRE":
         return {
           ...state,
