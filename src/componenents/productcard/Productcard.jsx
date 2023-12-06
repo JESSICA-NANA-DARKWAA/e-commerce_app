@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./Productcard.css";
 import { MdStarRate } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../AppContext";
