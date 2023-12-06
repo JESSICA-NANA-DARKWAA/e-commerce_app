@@ -14,7 +14,7 @@ const Navbar = ({ cartItems }) => {
     <div>
       <nav className="navbar">
         <span className="logo">Logo</span>
-        <Link to="/Retail" className="Retail-btn">
+        <Link to="/Products" className="Retail-btn">
           Retail
         </Link>
         <form action="#" className="search-form">
