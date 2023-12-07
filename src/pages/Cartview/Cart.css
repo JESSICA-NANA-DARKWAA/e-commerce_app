@@ -1,3 +1,6 @@
+body {
+  background-color: white;
+}
 .cart-view-container {
   /* padding: 128px; */
   display: flex;
@@ -116,6 +119,7 @@ h4 {
   width: 40px;
   background-color: white;
   border: 1px solid gray;
+  opacity: 0.7;
 }
 
 .check-btn {
@@ -165,12 +169,17 @@ h4 {
 .remove-btn {
   border: 2px solid whitesmoke;
   cursor: pointer;
+  color: gray;
+  background-color: white;
 }
 .add-btn {
   border: 2px solid whitesmoke;
   cursor: pointer;
+  color: gray;
+  background-color: white;
 }
 .num-btn {
   border: 2px solid whitesmoke;
   cursor: pointer;
+  color: black;
 }

@@ -1,5 +1,9 @@
 h2 {
   margin-left: 20px;
+  color: black;
+}
+body {
+  background-color: white;
 }
 .circle-container {
   width: 1280px;
